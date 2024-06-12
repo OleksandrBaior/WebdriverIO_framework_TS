@@ -79,4 +79,4 @@ To open html report :
 
 ## 🔑 License
 
-[??????](https://github.com/OleksandrBaior/JS-Playwright-AllureReport?tab=MIT-1-ov-file)
+[MIT license](https://github.com/OleksandrBaior/WebdriverIO_framework_TS?tab=MIT-1-ov-file)
