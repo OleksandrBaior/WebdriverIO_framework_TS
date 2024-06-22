@@ -30,7 +30,7 @@ Run your tests with UI Mode:
 Running a single test file:
 
 ```
-npx wdio run ./wdio.conf.js --spec example.e2e.js
+npx wdio run ./wdio.conf.js --spec "./**/**/*.spec.ts"
 ```
 
 Running a test file for tag:
@@ -64,7 +64,7 @@ To open allure report:
 
 ## 📝 WebdriverIO Report
 
-For reporting used Reports - **LIST and HTML**  
+For reporting used Reports - **Spec Reporter**  
 Learn more about Reports at [Reports](https://playwright.dev/docs/test-reporters#introduction)
 
 To open html report :

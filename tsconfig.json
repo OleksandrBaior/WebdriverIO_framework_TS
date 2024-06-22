@@ -14,7 +14,8 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true // Allow default imports from modules with no default export
     },
-    "include": ["test", "wdio.conf.ts"]
+    "include": ["test", "wdio.conf.ts", "wdio.firefox.conf.ts"]
 }
