@@ -17,7 +17,7 @@ export const config: Options.Testrunner = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: process.env.CI ? ['headless', 'disable-gpu'] : [],
+                args: process.env.CI ? ['headless'] : [],
             },
         },
     ],
@@ -62,13 +62,16 @@ export const config: Options.Testrunner = {
             video,
             {
                 saveAllVideos: false, // If true, also saves videos for successful test cases
-                videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+                videoSlowdownMultiplier: 10, // Higher to get slower videos, lower for faster videos [Value 1-100]
             },
         ],
     ],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
+    },
+    before: function () {
+        browser.setWindowSize(1920, 1080);
     },
     afterTest: async function ({ error }) {
         if (error) {
