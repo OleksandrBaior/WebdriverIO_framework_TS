@@ -32,6 +32,6 @@ it('TC_07_Verify adding and deleting item from the shoppoing card', async () => 
         ShopPage.yourCart.continueShoppingBtn.click();
     });
     await step('Shopping cart is close', async () => {
-        await expect(ShopPage.yourCart.shoppingCart).toBeDisplayed();
+        await expect(ShopPage.yourCart.shoppingCart).not.toBeDisplayed();
     });
 });

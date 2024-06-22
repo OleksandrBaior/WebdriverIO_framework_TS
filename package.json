@@ -26,12 +26,10 @@
         "format:allFilesPrettier": "npx prettier . --write",
         "allure:generateReport": "allure generate allure-results --clean",
         "allure:openReport": "allure open",
-        "allure:generateOpenReport": "allure serve"
+        "allure:generateOpenReport": "allure serve",
+        "wdio-safaridriver-service": "^2.1.1"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
-    },
-    "devDependencies": {
-        "wdio-safaridriver-service": "^2.1.1"
     }
 }

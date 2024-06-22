@@ -61,8 +61,8 @@ export const config: Options.Testrunner = {
         [
             video,
             {
-                saveAllVideos: false, // If true, also saves videos for successful test cases
-                videoSlowdownMultiplier: 10, // Higher to get slower videos, lower for faster videos [Value 1-100]
+                saveAllVideos: false,
+                videoSlowdownMultiplier: 10,
             },
         ],
     ],
