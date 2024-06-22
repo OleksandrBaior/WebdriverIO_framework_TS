@@ -116,9 +116,9 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: function ({ error }) {
+    afterTest: async function ({ error }) {
         if (error) {
-            browser.takeScreenshot();
+            await browser.takeScreenshot();
         }
     },
     /**
