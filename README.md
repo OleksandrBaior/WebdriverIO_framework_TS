@@ -10,39 +10,39 @@ Web site - [Redmime.org](https://www.redmine.org/)
 ## 📦 Setup
 
 1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
-2. Clone git repository `????`
+2. Clone git repository `git clone https://github.com/OleksandrBaior/WebdriverIO_framework_TS.git`
 3. Install project dependencies specified in the package.json `npm install`
 
 ## ⚙️ Running Tests
 
-Run your tests:
+Run tests chrome:
 
 ```
-npx wdio run ./wdio.conf.js
+npm run test:chrome
 ```
 
-Run your tests with UI Mode:
+Run tests firefox:
 
 ```
+npm run test:firefox
+```
 
+Run tests chromeHeadless:
+
+```
+npm run test:chromeHeadless
+```
+
+Run tests chromeHeadless:
+
+```
+npm run test:firefoxHedless
 ```
 
 Running a single test file:
 
 ```
 npx wdio run ./wdio.conf.js --spec "./**/**/*.spec.ts"
-```
-
-Running a test file for tag:
-
-```
-
-```
-
-To debug tests with playwright inspector:
-
-```
-
 ```
 
 ## 📜 Allure Report
@@ -53,29 +53,18 @@ Learn more about Allure Report at [Allure](https://allurereport.org/)
 To generate allure report:
 
 ```
-
+npm run allure:generateReport
 ```
 
 To open allure report:
 
 ```
-
-```
-
-## 📝 WebdriverIO Report
-
-For reporting used Reports - **Spec Reporter**  
-Learn more about Reports at [Reports](https://playwright.dev/docs/test-reporters#introduction)
-
-To open html report :
-
-```
-
+npm run allure:openReport
 ```
 
 ## 🌏 Report on CI
 
-[https://oleksandrbaior.github.io/Playwright_framework_AllureReport_JS/index.html](https://oleksandrbaior.github.io/Playwright_framework_AllureReport_JS/index.html) ???????????????????????
+[https://oleksandrbaior.github.io/WebdriverIO_framework_TS](https://oleksandrbaior.github.io/WebdriverIO_framework_TS)
 
 ## 🔑 License
 
