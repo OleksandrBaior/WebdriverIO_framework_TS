@@ -10,7 +10,7 @@ Web site - [Redmime.org](https://www.redmine.org/)
 ## 📦 Setup
 
 1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
-2. ake sure Java version 8 or above installed, and its directory is specified in the JAVA_HOME environment variable for Allure Report
+2. Make sure Java version 8 or above installed, and its directory is specified in the JAVA_HOME environment variable for Allure Report
 3. Clone git repository `git clone https://github.com/OleksandrBaior/WebdriverIO_framework_TS.git`
 4. Install project dependencies specified in the package.json `npm install`
 
@@ -66,6 +66,23 @@ npm run allure:openReport
 ## 🌏 Report on CI
 
 [https://oleksandrbaior.github.io/WebdriverIO_framework_TS](https://oleksandrbaior.github.io/WebdriverIO_framework_TS)
+
+## 🐳 Run tests using Docker
+
+1. Learn more about Docker tool at [Docker](https://www.docker.com/)
+2. Install [Docker Desktop](https://docs.docker.com/get-docker/)
+
+To generate Docker image:
+
+```
+npm run dockerBuild
+```
+
+Run test in Docker container:
+
+```
+npm run dockerRun
+```
 
 ## 🔑 License
 
