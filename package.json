@@ -13,23 +13,26 @@
         "allure-commandline": "^2.29.0",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.4",
+        "npm": "^10.8.1",
         "prettier": "3.2.5",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5",
+        "wdio-safaridriver-service": "^2.1.1",
         "wdio-video-reporter": "^5.2.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
     },
     "scripts": {
         "test:chrome": "wdio run ./wdio.conf.ts",
         "test:firefox": "wdio run ./configs/wdio.firefox.conf.ts",
-        "test:chromeHedless": "wdio run ./configs/wdio.chromeHedless.conf.ts",
+        "test:chromeHeadless": "wdio run ./configs/wdio.chromeHedless.conf.ts",
         "test:firefoxHedless": "wdio run ./configs/wdio.firefoxHeadless.conf.ts",
         "format:allFilesPrettier": "npx prettier . --write",
         "allure:generateReport": "allure generate allure-results --clean",
         "allure:openReport": "allure open",
         "allure:generateOpenReport": "allure serve",
-        "wdio-safaridriver-service": "^2.1.1"
-    },
-    "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown"
+        "dockerBuild": "docker build -t mytest -f Dockerfile . ",
+        "dockerRun": "docker run -it mytest"
     }
 }

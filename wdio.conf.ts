@@ -70,6 +70,7 @@ export const config: Options.Testrunner = {
         ui: 'bdd',
         timeout: 60000,
     },
+    beforeSession: function () {},
     before: function () {
         browser.setWindowSize(1920, 1080);
     },

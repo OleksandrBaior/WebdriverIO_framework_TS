@@ -10,8 +10,9 @@ Web site - [Redmime.org](https://www.redmine.org/)
 ## 📦 Setup
 
 1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
-2. Clone git repository `git clone https://github.com/OleksandrBaior/WebdriverIO_framework_TS.git`
-3. Install project dependencies specified in the package.json `npm install`
+2. ake sure Java version 8 or above installed, and its directory is specified in the JAVA_HOME environment variable for Allure Report
+3. Clone git repository `git clone https://github.com/OleksandrBaior/WebdriverIO_framework_TS.git`
+4. Install project dependencies specified in the package.json `npm install`
 
 ## ⚙️ Running Tests
 
