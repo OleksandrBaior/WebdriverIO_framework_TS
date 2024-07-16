@@ -1,6 +1,7 @@
 import type { Options } from '@wdio/types';
 import video from 'wdio-video-reporter';
 import * as os from 'os';
+import endpoints from './resourcers/endpoints.json' assert { type: 'json' };
 
 export const config: Options.Testrunner = {
     runner: 'local',
@@ -17,13 +18,13 @@ export const config: Options.Testrunner = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: process.env.CI ? ['headless'] : [],
+                args: process.env.CI ? ['headless'] : ['headless'],
             },
         },
     ],
     logLevel: 'info',
     bail: 3,
-    baseUrl: 'https://telnyx.com',
+    baseUrl: endpoints.baseUrl,
     waitforTimeout: 10000,
     connectionRetryTimeout: 60000,
     connectionRetryCount: 3,

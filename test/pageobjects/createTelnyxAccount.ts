@@ -40,7 +40,7 @@ class CreateTelnyxAccount extends BasePage {
             return $('#terms_and_conditions_message');
         },
         get googleBtn() {
-            return $('[class="nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb "]');
+            return $('//*[@id="__next"]/div/main/section/div[2]/div/div[1]/div/div[1]/div/div');
         },
         get microsoftBtn() {
             return $('.c-fGHEql > .c-kDQqQr');

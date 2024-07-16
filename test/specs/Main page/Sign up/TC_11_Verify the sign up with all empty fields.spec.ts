@@ -23,7 +23,7 @@ it('TC_11_Verify the sign up with all empty fields', async () => {
         await MainPage.header.signUpBtn.click();
     });
     await step('The Create a Telnyx account modal is present', async () => {
-        await expect(browser).toHaveUrl(endpoints.createTelnyxAccount);
+        await expect(browser).toHaveUrl(endpoints.baseUrl + endpoints.createTelnyxAccount);
         await expect(await CreateTelnyxAccount.modal.title).toBeDisplayed();
     });
     await step('I click on sign up button', async () => {

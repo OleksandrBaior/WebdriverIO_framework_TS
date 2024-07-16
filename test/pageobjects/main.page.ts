@@ -9,22 +9,22 @@ class MainPage extends BasePage {
     };
     navigationBar = {
         get productsBtn() {
-            return $('[id*="radix-:Rkljm:"]');
+            return $('[id*="radix-:Raarm:"]');
         },
         get solutionBtn() {
             return $$('nav > a[href="/solutions"]')[0];
         },
         get pricingBtn() {
-            return $('[id*="radix-:Rlljm:"]');
+            return $('[id*="radix-:Raqrm:"]');
         },
         get whyTelnuxBtn() {
-            return $('[id*="radix-:Rm5jm:"]');
+            return $('[id*="radix-:Rb2rm:"]');
         },
         get resourcesBtn() {
-            return $('[id*="radix-:Rmljm:"]');
+            return $('[id*="radix-:Rbarm:"]');
         },
         get developersBtn() {
-            return $('[id*="radix-:Rn5jm:"]');
+            return $('[id*="radix-:Rbirm:"]');
         },
     };
     contactWithUsElements = {
@@ -71,10 +71,6 @@ class MainPage extends BasePage {
             return $$('[class="c-ejcPbY"] a')[2];
         },
     };
-
-    public open() {
-        return super.open('');
-    }
 }
 
 export default new MainPage();

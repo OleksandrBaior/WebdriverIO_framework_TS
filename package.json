@@ -26,13 +26,13 @@
     "scripts": {
         "test:chrome": "wdio run ./wdio.conf.ts",
         "test:firefox": "wdio run ./configs/wdio.firefox.conf.ts",
-        "test:chromeHeadless": "wdio run ./configs/wdio.chromeHedless.conf.ts",
-        "test:firefoxHedless": "wdio run ./configs/wdio.firefoxHeadless.conf.ts",
-        "format:allFilesPrettier": "npx prettier . --write",
-        "allure:generateReport": "allure generate allure-results --clean",
-        "allure:openReport": "allure open",
-        "allure:generateOpenReport": "allure serve",
-        "dockerBuild": "docker build -t mytest -f Dockerfile . ",
-        "dockerRun": "docker run -it mytest"
+        "test:chrome:headless": "wdio run ./configs/wdio.chromeHeadless.conf.ts",
+        "test:firefox:hedless": "wdio run ./configs/wdio.firefoxHeadless.conf.ts",
+        "format:allFiles:prettier": "npx prettier . --write",
+        "allure:generate:report": "allure generate allure-results --clean",
+        "allure:open:report": "allure open",
+        "allure:generate:open:report": "allure serve",
+        "docker:Build": "docker build -t mytest -f Dockerfile . ",
+        "docker:Run": "docker run -it mytest"
     }
 }

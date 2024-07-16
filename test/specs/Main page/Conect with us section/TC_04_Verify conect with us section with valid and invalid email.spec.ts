@@ -38,6 +38,6 @@ it('TC_04_Verify conect with us section with valid and invalid email', async () 
         await MainPage.contactWithUsElements.submitBtn.click();
     });
     await step('Create account page opens', async () => {
-        await expect(browser).toHaveUrl(endpoints.createAccount);
+        await expect(browser).toHaveUrl(endpoints.baseUrl + endpoints.createAccount);
     });
 });

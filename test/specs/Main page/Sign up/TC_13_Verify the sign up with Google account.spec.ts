@@ -10,7 +10,7 @@ it('TC_13_Verify the sign up with Google account', async () => {
         await CreateTelnyxAccount.open();
     });
     await step('Google button is visible and clickable', async () => {
-        await expect(CreateTelnyxAccount.modal.googleBtn).toBeDisplayed();
-        await expect(CreateTelnyxAccount.modal.googleBtn).not.toHaveAttr('disabled');
+        await expect(await CreateTelnyxAccount.modal.googleBtn).toBeDisplayed();
+        await expect(await CreateTelnyxAccount.modal.googleBtn).not.toHaveAttr('disabled');
     });
 });

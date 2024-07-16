@@ -34,16 +34,16 @@ Run tests chromeHeadless:
 npm run test:chromeHeadless
 ```
 
-Run tests chromeHeadless:
+Run tests chromeHeaadless:
 
 ```
-npm run test:firefoxHedless
+npm run test:firefoxHeadless
 ```
 
 Running a single test file:
 
 ```
-npx wdio run ./wdio.conf.js --spec "./**/**/*.spec.ts"
+npx wdio run ./wdio.conf.ts --spec "./**/**/*.spec.ts"
 ```
 
 ## 📜 Allure Report

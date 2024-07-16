@@ -1,7 +1,7 @@
 import { expect } from '@wdio/globals';
 import { step } from '@wdio/allure-reporter';
 import { addFeature } from '@wdio/allure-reporter';
-import RandomUtils from '../../../../utils/random.utils.ts';
+import { randomValue } from '../../../../utils/random.utils.ts';
 import ContactUs from '../../../pageobjects/contactUs.page.ts';
 
 it('TC_08_Verify the contact us form with valid data', async () => {
@@ -17,24 +17,23 @@ it('TC_08_Verify the contact us form with valid data', async () => {
         await ContactUs.form.howCanWeHelp.selectByAttribute('value', 'Sales-Inquiry');
     });
     await step('I input random first name', async () => {
-        await ContactUs.form.firstName.setValue(RandomUtils.randomValue('firstName'));
+        await ContactUs.form.firstName.setValue(randomValue('firstName'));
     });
     await step('I input random last name', async () => {
-        await ContactUs.form.lastName.setValue(RandomUtils.randomValue('middleName'));
+        await ContactUs.form.lastName.setValue(randomValue('middleName'));
     });
     await step('I input random email', async () => {
-        await ContactUs.form.email.setValue(RandomUtils.randomValue('email'));
+        await ContactUs.form.email.setValue(randomValue('email'));
     });
     await step('I select +380 option', async () => {
         await ContactUs.form.country.selectByAttribute('value', '+380');
     });
     await step('I input random phone number', async () => {
-        await ContactUs.form.phoneNumber.setValue(RandomUtils.randomValue('phoneNumber'));
+        await ContactUs.form.phoneNumber.setValue(randomValue('phoneNumber'));
     });
     await step('I input random website', async () => {
-        await ContactUs.form.companyWebsite.setValue(RandomUtils.randomValue('text'));
+        await ContactUs.form.companyWebsite.setValue(randomValue('text'));
     });
-    RandomUtils;
     await step('I select AI Inference option', async () => {
         await ContactUs.form.primaryInterest.selectByAttribute('value', 'AI / Inference');
     });
@@ -42,10 +41,10 @@ it('TC_08_Verify the contact us form with valid data', async () => {
         await ContactUs.form.budget.selectByAttribute('value', '$500 - $1000');
     });
     await step('I input random how Do You Plan', async () => {
-        await ContactUs.form.howDoYouPlan.setValue(RandomUtils.randomValue('text'));
+        await ContactUs.form.howDoYouPlan.setValue(randomValue('text'));
     });
     await step('I input random how Did You Hear About Telnyx', async () => {
-        await ContactUs.form.howDidYouHearAboutTelnyx.setValue(RandomUtils.randomValue('text'));
+        await ContactUs.form.howDidYouHearAboutTelnyx.setValue(randomValue('text'));
     });
     await step('I check subscription', async () => {
         await ContactUs.form.subscriptionCheckbox.click();
