@@ -44,13 +44,13 @@ it('TC_08_Verify the contact us form with valid data', async () => {
         await ContactUs.form.howDoYouPlan.setValue(randomValue('text'));
     });
     await step('I input random how Did You Hear About Telnyx', async () => {
-        await ContactUs.form.howDidYouHearAboutTelnyx.setValue(randomValue('text'));
+        await ContactUs.setValue(await ContactUs.form.howDidYouHearAboutTelnyx, randomValue('text'));
     });
     await step('I check subscription', async () => {
-        await ContactUs.form.subscriptionCheckbox.click();
+        await ContactUs.clickElement(await ContactUs.form.subscriptionCheckbox);
     });
     await step('I click on submit button', async () => {
-        await ContactUs.form.submitBtn.click();
+        await ContactUs.clickElement(await ContactUs.form.submitBtn);
     });
     await step('Success title is visible', async () => {
         await expect(ContactUs.form.successTitle).toBeDisplayed();

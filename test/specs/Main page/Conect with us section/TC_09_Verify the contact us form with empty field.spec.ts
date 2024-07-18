@@ -15,8 +15,7 @@ it('TC_09_Verify the contact us form with empty field', async () => {
     });
     await step('Border becomes red and error message appears', async () => {
         const howCanWeHelp = await ContactUs.form.howCanWeHelp.getCSSProperty('border-color');
-        await expect(howCanWeHelp.value).toEqual(constants.styleFiels.borderColor);
-
+        expect(howCanWeHelp.value === constants.styleFiels.borderColor[0] || howCanWeHelp.value === constants.styleFiels.borderColor[1]).toBe(true);
         const errorMsg = await browser.$(ContactUs.errorMsg);
         await expect(errorMsg).toBeDisplayed();
         await expect(errorMsg).toHaveText(constants.styleFiels.error);

@@ -33,14 +33,14 @@ it('TC_12_Verify the sign up with invald filled fields', async () => {
     });
     await step('Company name field is in the error state', async () => {
         const companyEmail = await CreateTelnyxAccount.modal.companyEmail.getCSSProperty('border-color');
-        await expect(companyEmail.value).toEqual(constants.styleFiels.borderColor);
+        await expect(companyEmail.value === constants.styleFiels.borderColor[0] || companyEmail.value === constants.styleFiels.borderColor[1]).toBe(true);
     });
     await step('Password field is in the error state', async () => {
         const password = await CreateTelnyxAccount.modal.password.getCSSProperty('border-color');
-        await expect(password.value).toEqual(constants.styleFiels.borderColor);
+        await expect(password.value === constants.styleFiels.borderColor[0] || password.value === constants.styleFiels.borderColor[1]).toBe(true);
     });
     await step('Terms And Conditional checkbox is in the error state', async () => {
         const termsAndConditional = await CreateTelnyxAccount.modal.termsAndConditional.getCSSProperty('border-color');
-        await expect(termsAndConditional.value).toEqual(constants.styleFiels.borderColor);
+        await expect(termsAndConditional.value === constants.styleFiels.borderColor[0] || termsAndConditional.value === constants.styleFiels.borderColor[1]).toBe(true);
     });
 });

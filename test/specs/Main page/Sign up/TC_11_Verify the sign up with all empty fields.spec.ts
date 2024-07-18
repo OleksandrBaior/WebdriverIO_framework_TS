@@ -9,7 +9,7 @@ import constants from '../../../../resourcers/constants.json' assert { type: 'js
 async function checkElement(elementPromise: Promise<WebdriverIO.Element>) {
     const element = await elementPromise;
     const elementCSSProperty = await element.getCSSProperty('border-color');
-    await expect(elementCSSProperty.value).toEqual(constants.styleFiels.borderColor);
+    await expect(elementCSSProperty.value === constants.styleFiels.borderColor[0] || elementCSSProperty.value === constants.styleFiels.borderColor[1]).toBe(true);
     await expect(element).toBeDisplayed();
 }
 

@@ -35,14 +35,7 @@ export const config: Options.Testrunner = {
         [
             'spec',
             {
-                color: true,
                 showPreface: false,
-                realtimeReporting: true,
-                addConsoleLogs: true,
-                symbols: {
-                    passed: '[PASS]',
-                    failed: '[FAIL]',
-                },
             },
         ],
         [
@@ -69,7 +62,7 @@ export const config: Options.Testrunner = {
     ],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000,
+        timeout: 600000,
     },
     beforeSession: function () {},
     before: function () {

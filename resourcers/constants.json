@@ -22,7 +22,7 @@
     "styleFiels": {
         "redBorder": "1px solid rgb(235, 0, 0)",
         "greenBorder": "1px solid rgb(0, 163, 122)",
-        "borderColor": "rgba(235,0,0,1)",
+        "borderColor": ["rgba(235,0,0,1)", "rgb(235,0,0)"],
         "error": "This field is required."
     }
 }

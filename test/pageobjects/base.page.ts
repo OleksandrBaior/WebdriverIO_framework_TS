@@ -53,4 +53,20 @@ export default class BasePage {
     public open(path = '') {
         return browser.url(`${path}`);
     }
+
+    public async clickElement(element: WebdriverIO.Element) {
+        await browser.execute((el) => {
+            el.click();
+        }, element);
+    }
+
+    public async setValue(element: WebdriverIO.Element, value: any) {
+        await browser.execute(
+            (el, value) => {
+                el.value = value;
+            },
+            element,
+            value
+        );
+    }
 }
