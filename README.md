@@ -71,6 +71,7 @@ npm run allure:openReport
 
 1. Learn more about Docker tool at [Docker](https://www.docker.com/)
 2. Install [Docker Desktop](https://docs.docker.com/get-docker/)
+3. Run Docker Desktop
 
 To generate Docker image:
 
