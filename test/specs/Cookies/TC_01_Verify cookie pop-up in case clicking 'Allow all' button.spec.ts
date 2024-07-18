@@ -30,7 +30,7 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", async () =>
         await MainPage.cookiesElements.cookiesSettingsBtn.click();
     });
     await step('Cookies Settings modal is visible', async () => {
-        await expect(MainPage.cookiesElements.cookiesSettingsModal).toBeDisplayed();
+        await expect(await MainPage.cookiesElements.cookiesSettingsModal).toBeDisplayed();
     });
     await step('I click on close button', async () => {
         await MainPage.cookiesElements.cookiesSettingsCloseBtn.click();

@@ -14,7 +14,7 @@ it('TC_05_Verify privacy policy and terms and conditions links of conect with us
         await MainPage.contactWithUsElements.titleSection.scrollIntoView();
     });
     await step('I click on privacy policy link', async () => {
-        await MainPage.contactWithUsElements.privacyPolicyLink.click();
+        await MainPage.clickElement(await MainPage.contactWithUsElements.privacyPolicyLink);
     });
     await step('Privacy policy page opens', async () => {
         await expect(browser).toHaveUrl(endpoints.baseUrl + endpoints.privacyPolicy);
@@ -23,7 +23,7 @@ it('TC_05_Verify privacy policy and terms and conditions links of conect with us
         await browser.back();
     });
     await step('I click on terms and conditional link', async () => {
-        await MainPage.contactWithUsElements.termsAndCondition.click();
+        await MainPage.clickElement(await MainPage.contactWithUsElements.termsAndCondition);
     });
     await step('Terms and conditional page opens', async () => {
         await expect(browser).toHaveUrl(endpoints.baseUrl + endpoints.termsAndConditions);
