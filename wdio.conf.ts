@@ -18,7 +18,7 @@ export const config: Options.Testrunner = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: process.env.CI ? ['headless'] : ['headless'],
+                args: process.env.CI ? ['headless'] : [],
             },
         },
     ],
