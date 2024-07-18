@@ -32,7 +32,7 @@
         "allure:generate:report": "allure generate allure-results --clean",
         "allure:open:report": "allure open",
         "allure:generate:open:report": "allure serve",
-        "docker:Build": "docker build -t mytest -f Dockerfile . ",
-        "docker:Run": "docker run -it mytest"
+        "docker:build": "docker build -t mytest -f Dockerfile .",
+        "docker:run": "docker run -it mytest"
     }
 }

@@ -1,6 +1,5 @@
 FROM node:18.17.0
 
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     openjdk-17-jre-headless \
@@ -30,5 +29,5 @@ COPY . /app
 
 RUN npm install
 
-CMD npm run test:chromeHeadless
+CMD npm run test:chrome:headless
 

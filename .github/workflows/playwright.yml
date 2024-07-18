@@ -26,6 +26,9 @@ jobs:
 
             - name: Test Chrome
               run: npm run test:chrome
+              env:
+                  group: 'UI-Chrome'
+                  TZ: Europe/Warsaw
 
             - name: Get Allure history
               uses: actions/checkout@v2

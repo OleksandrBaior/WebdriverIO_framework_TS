@@ -76,13 +76,13 @@ npm run allure:openReport
 To generate Docker image:
 
 ```
-npm run dockerBuild
+npm run docker:build
 ```
 
 Run test in Docker container:
 
 ```
-npm run dockerRun
+npm run docker:run
 ```
 
 ## 🔑 License
