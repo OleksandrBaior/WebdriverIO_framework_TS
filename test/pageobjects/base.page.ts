@@ -54,16 +54,24 @@ export default class BasePage {
         return browser.url(`${path}`);
     }
 
-    public async clickElement(element: WebdriverIO.Element) {
-        await browser.execute((el) => {
-            el.click();
-        }, element);
+    public async clickElement(element: WebdriverIO.Element | undefined) {
+        if (element) {
+            await browser.execute((el) => {
+                el.click();
+            }, element);
+        } else {
+            console.error('Element is undefined');
+        }
     }
 
-    public async setValue(element: WebdriverIO.Element, value: any) {
+    public async setValue(element: WebdriverIO.Element, value: string) {
         await browser.execute(
             (el, value) => {
-                el.value = value;
+                if (el instanceof HTMLInputElement) {
+                    el.value = value;
+                } else {
+                    console.error('Element is undefined');
+                }
             },
             element,
             value

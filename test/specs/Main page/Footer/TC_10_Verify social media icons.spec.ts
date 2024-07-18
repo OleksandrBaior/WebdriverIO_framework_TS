@@ -25,19 +25,19 @@ it('TC_10_Verify social media icons', async () => {
         await expect(MainPage.footerSection.imageFooter).toBeDisplayed();
     });
     await step('I click on LinkedIn icon', async () => {
-        await MainPage.footerSection.linkedIn.click();
+        await MainPage.clickElement(await MainPage.footerSection.linkedIn);
     });
     await step('LinkedIn page opens', async () => {
         await checkURLonAnotherTab(endpoints.linkedin);
     });
     await step('I click on Twitter icon', async () => {
-        await MainPage.footerSection.twitter.click();
+        await MainPage.clickElement(await MainPage.footerSection.twitter);
     });
     await step('Twitter page opens', async () => {
         await checkURLonAnotherTab(endpoints.twitter);
     });
     await step('I click on Facebook icon', async () => {
-        await MainPage.footerSection.facebook.click();
+        await MainPage.clickElement(await MainPage.footerSection.facebook);
     });
     await step('Then Facebook page opens', async () => {
         await checkURLonAnotherTab(endpoints.facebook);
