@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jul 22 18:46:54 GMT 2024","Mon Jul 22 18:47:01 GMT 2024","7905","","","","","","TC_01_Verify cookie pop-up in case clicking 'Allow all' button",""
