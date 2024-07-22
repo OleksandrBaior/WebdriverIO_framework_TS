@@ -16,7 +16,7 @@ export default class BasePage {
             return $('[class*="c-PJLV c-fGbiyG"]');
         },
         get cookiesSettingsBtn() {
-            return $('#onetrust-pc-btn-handler');
+            return $('//*[@id="onetrust-pc-btn-handler"]');
         },
         get cookiesSettingsModal() {
             return $('#onetrust-pc-sdk > div');
