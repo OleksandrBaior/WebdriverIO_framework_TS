@@ -23,7 +23,7 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", async () =>
         await browser.back();
     });
     await step('Cookies Settings button is visible', async () => {
-        await browser.refresh();
+        await browser.deleteCookies();
         await expect(await MainPage.cookiesElements.cookiesSettingsBtn).toBeDisplayed();
     });
     await step('I click on cookies settings button', async () => {
