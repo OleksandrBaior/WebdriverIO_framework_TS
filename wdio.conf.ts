@@ -41,9 +41,8 @@ export const config: Options.Testrunner = {
         [
             'allure',
             {
-                outputDir: 'allure-results',
+                outputDir: 'reports/allure-result',
                 disableWebdriverStepsReporting: true,
-                disableWebdriverScreenshotsReporting: true,
                 reportedEnvironmentVars: {
                     os_platform: os.platform(),
                     os_release: os.release(),
@@ -56,7 +55,8 @@ export const config: Options.Testrunner = {
             video,
             {
                 saveAllVideos: false,
-                videoSlowdownMultiplier: 10,
+                videoSlowdownMultiplier: 30,
+                outputDir: 'reports/allure-result/_result_',
             },
         ],
     ],
@@ -68,9 +68,9 @@ export const config: Options.Testrunner = {
     before: function () {
         browser.setWindowSize(1920, 1080);
     },
-    afterTest: async function ({ error }) {
+    afterTest: function ({ error }) {
         if (error) {
-            await browser.takeScreenshot();
+            browser.takeScreenshot();
         }
     },
 };

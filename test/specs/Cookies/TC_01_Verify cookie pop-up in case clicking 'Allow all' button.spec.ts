@@ -17,7 +17,7 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", async () =>
         await MainPage.cookiesElements.cookieReadMoreLink.click();
     });
     await step('Title is visible', async () => {
-        expect(await MainPage.cookiesElements.cookieTitleReadMorePage).toHaveText(constants.cookies.cookieTitleReadMorePage);
+        await expect(await MainPage.cookiesElements.cookieTitleReadMorePage).toHaveText(constants.cookies.cookieTitleReadMorePage);
     });
     await step('I come back to main page', async () => {
         await browser.back();
