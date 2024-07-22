@@ -29,8 +29,8 @@
         "test:chrome:headless": "wdio run ./configs/wdio.chromeHeadless.conf.ts",
         "test:firefox:hedless": "wdio run ./configs/wdio.firefoxHeadless.conf.ts",
         "format:allFiles:prettier": "npx prettier . --write",
-        "generate:allureReport": "allure generate --clean -o reports/allure-report reports/allure-result",
-        "open:allureReport": "allure open reports/allure-report",
+        "generate:allure:Report": "allure generate --clean -o reports/allure-report reports/allure-result",
+        "open:allure:Report": "allure open reports/allure-report",
         "allure:generate:open:report": "allure serve reports/allure-result",
         "docker:build": "docker build -t mytest -f Dockerfile .",
         "docker:run": "docker run -it mytest"
