@@ -11,7 +11,7 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", async () =>
         await MainPage.open();
     });
     await step('Cookie modal is visible', async () => {
-        await MainPage.cookiesElements.cookieModal.click();
+        await expect(await MainPage.cookiesElements.cookieModal).toBeDisplayed();
     });
     await step('I click on read more link', async () => {
         await MainPage.cookiesElements.cookieReadMoreLink.click();
@@ -21,9 +21,9 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", async () =>
     });
     await step('I come back to main page', async () => {
         await browser.back();
-        await browser.refresh();
     });
     await step('Cookies Settings button is visible', async () => {
+        await browser.refresh();
         await expect(await MainPage.cookiesElements.cookiesSettingsBtn).toBeDisplayed();
     });
     await step('I click on cookies settings button', async () => {
