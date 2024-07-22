@@ -12,8 +12,7 @@ export const config: Options.Testrunner = {
             transpileOnly: true,
         },
     },
-    // specs: ['./test/specs/**/*.spec.ts'],
-    specs: ["test/specs/Cookies/TC_01_Verify cookie pop-up in case clicking 'Allow all' button.spec.ts"],
+    specs: ['./test/specs/**/*.spec.ts'],
     maxInstances: 1,
     capabilities: [
         {
