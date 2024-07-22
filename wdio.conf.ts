@@ -56,7 +56,7 @@ export const config: Options.Testrunner = {
             {
                 saveAllVideos: false,
                 videoSlowdownMultiplier: 30,
-                outputDir: 'reports/allure-result/_result_',
+                outputDir: 'reports/_result_',
             },
         ],
     ],
