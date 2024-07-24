@@ -9,7 +9,7 @@ export const config: Options.Testrunner = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: ['--no-sandbox', '--disable-infobars', '--headless', '--disable-gpu'],
+                args: ['--no-sandbox', '--disable-infobars', '--headless', '--disable-gpu', '--disable-dev-shm-usage'],
             },
         },
     ],
