@@ -1,4 +1,4 @@
-import type { Options } from '@wdio/types';
+import { Options } from '@wdio/types';
 import video from 'wdio-video-reporter';
 import * as os from 'os';
 import endpoints from './resourcers/endpoints.json' assert { type: 'json' };
@@ -18,19 +18,17 @@ export const config: Options.Testrunner = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: process.env.CI ? ['headless'] : [],
+                args: process.env.CI ? ['--headless', '--disable-gpu', '--no-sandbox'] : [],
             },
         },
     ],
     logLevel: 'info',
-    bail: 3,
     baseUrl: endpoints.baseUrl,
     waitforTimeout: 10000,
     connectionRetryTimeout: 60000,
     connectionRetryCount: 3,
     services: ['visual'],
     framework: 'mocha',
-
     reporters: [
         [
             'spec',
