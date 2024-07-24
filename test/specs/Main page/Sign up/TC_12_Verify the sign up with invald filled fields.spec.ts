@@ -28,7 +28,7 @@ it('TC_12_Verify the sign up with invald filled fields', async () => {
         await CreateTelnyxAccount.modal.signUpBtn.click();
     });
     await step('I stay on the sign up page', async () => {
-        await expect(browser).toHaveUrl(endpoints.baseUrl + endpoints.createTelnyxAccount);
+        await expect(browser).toHaveUrl(browser.options.baseUrl + endpoints.createTelnyxAccount);
         await expect(CreateTelnyxAccount.modal.title).toBeDisplayed();
     });
     await step('Company name field is in the error state', async () => {

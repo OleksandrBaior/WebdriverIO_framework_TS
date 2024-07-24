@@ -1,5 +1,4 @@
 {
-    "baseUrl": "https://telnyx.com",
     "createAccount": "/sign-up?email=test%40gmail.com",
     "privacyPolicy": "/privacy-policy",
     "termsAndConditions": "/terms-and-conditions",
