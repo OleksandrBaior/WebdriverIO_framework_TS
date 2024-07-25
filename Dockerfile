@@ -1,6 +1,5 @@
 FROM node:18.17.0
 
-# Встановлюємо необхідні пакети та Java
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     openjdk-17-jre-headless \
@@ -26,7 +25,6 @@ RUN apt-get update && \
 
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
-# Встановлюємо останню версію ChromeDriver
 RUN CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
     wget -q https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
     unzip chromedriver_linux64.zip && \
@@ -34,7 +32,6 @@ RUN CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_R
     chmod +x /usr/local/bin/chromedriver && \
     rm chromedriver_linux64.zip
 
-# Встановлюємо Google Chrome
 RUN wget -q -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt-get update && \
     apt-get install -y /tmp/google-chrome.deb && \
