@@ -1,7 +1,7 @@
 import { Options } from '@wdio/types';
 import video from 'wdio-video-reporter';
 import * as os from 'os';
-import endpoints from './resourcers/endpoints.json' assert { type: 'json' };
+import environments from './resourcers/environments.json' assert { type: 'json' };
 
 export const config: Options.Testrunner = {
     runner: 'local',
@@ -23,7 +23,7 @@ export const config: Options.Testrunner = {
         },
     ],
     logLevel: 'info',
-    baseUrl: endpoints.baseUrl,
+    baseUrl: environments.baseUrl,
     waitforTimeout: 10000,
     connectionRetryTimeout: 60000,
     connectionRetryCount: 3,
